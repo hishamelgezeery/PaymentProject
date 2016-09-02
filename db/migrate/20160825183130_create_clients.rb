@@ -4,8 +4,6 @@ class CreateClients < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :subdomain
       t.references :location, foreign_key: true
-
-      t.timestamps
     end
   end
 end

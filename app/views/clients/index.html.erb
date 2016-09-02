@@ -1,0 +1,7 @@
+<h1>Clients on this Server</h1>
+
+<ul>
+	<% @clients.each do |client| %>
+		<li><%= link_to client.name, root_url(subdomain: client.subdomain) %></li>
+	<% end %>
+</ul>

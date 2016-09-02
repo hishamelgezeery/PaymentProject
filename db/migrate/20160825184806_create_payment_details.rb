@@ -6,8 +6,6 @@ class CreatePaymentDetails < ActiveRecord::Migration[5.0]
       t.string :card_type
       t.decimal :authorized_amount, :precision => 8, :scale => 2
       t.references :payment, foreign_key: true
-
-      t.timestamps
     end
   end
 end

@@ -6,8 +6,15 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
+  </head>
+   <nav class = "navbar navbar-default" role = "navigation">
+   
+   <div class = "navbar-header">
+      <a class = "navbar-brand" href = "<%= root_url(:subdomain => 'www') %>">Payment Services</a>
+   </div>
+   
+	</nav>
   <body>
     <%= yield %>
   </body>

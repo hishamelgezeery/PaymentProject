@@ -1,0 +1,106 @@
+<h1><%= @client.name %></h1>
+
+<h3 align="center"> Payment Form</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="well well-sm">
+               <form class="form-horizontal" method= post onsubmit=" return validateForm(event)" action="https://www.bridgepaynetsecuretest.com/WebLink3/WebLink.aspx">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Citation</legend>
+<input type="hidden" name="mode" value="PaymentForm" />
+ <input type="hidden" name="login" value="emvpgtest" />
+ <input type="hidden" name="ReceiptURL" value="http://ruleville.lvh.me:3000/success" /> 
+  <input type="hidden" name="Style_Page_BackgroundColor" value="#A9A9A9" />
+ <input type="hidden" name="Style_Form_BackgroundColor" value="#D3D3D3" />
+ <input type="hidden" name="Style_FontFamily" value="’Times New Roman’" /> 
+ <input type="hidden" name="password" value="QAZ123wsx!@#" />
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="defendantName">Defendent Name</label>  
+  <div class="col-md-4">
+  <input id="defendantName" name="defendantName" type="text" placeholder="Defendent Name" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="citationNo">Citation number</label>  
+  <div class="col-md-4">
+  <input id="citationNo" name="citationNo" type="text" placeholder="Citation Number" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="email">Email</label>  
+  <div class="col-md-4">
+  <input id="email" name="email" type="text" placeholder="Email" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="address">Address</label>  
+  <div class="col-md-6">
+  <input id="address" name="address" type="text" placeholder="Address" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="phoneNumber">Phone Number</label>  
+  <div class="col-md-4">
+  <input id="phoneNumber" name="phoneNumber" type="text" onkeypress='validatePhoneNumber(event)' placeholder="###-###-####" class="form-control input-md" maxlength="12" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="amount">Amount ($)</label>  
+  <div class="col-md-4">
+  <input id="amount" name="amount" onkeypress='validate(event)' onkeyup='updateAmounts()' type="text" placeholder="Amount" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="convenienceFee">Convenience Fee ($)</label>  
+  <div class="col-md-4">
+  <input id="convenienceFee" name="convenienceFee" type="text" readonly="readonly" placeholder="Convenience Fee" class="form-control input-md" step='0.01' required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="TotalAmt">Total Amount ($)</label>  
+  <div class="col-md-4">
+  <input  type="text" name="TotalAmt" id="TotalAmt" readonly="readonly" placeholder="Total Amount" class="form-control input-md" step='0.01' required="">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton">Submit Payment</label>
+  <div class="col-md-4">
+  <input type="submit" value="Submit payment" id="singlebutton" class="btn btn-primary"  />
+  </div>
+</div>
+
+</fieldset>
+</form>
+            </div>
+        </div>
+    </div>
+</div>

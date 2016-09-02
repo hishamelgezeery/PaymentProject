@@ -1,0 +1,16 @@
+<div class="field">
+  <%= f.attribute_fields do |a| %>
+  <div class="row col-md-4">
+  	<%= a.attribute_select({associations: [:client, :location]}, :class => 'form-control' )  %>
+  </div>
+  <% end %>
+  <div class="row col-md-4">
+  <%= f.predicate_select({},:class =>'form-control') %>	
+  </div>
+  
+  <%= f.value_fields do |v| %>
+  	<div class="row col-md-4">
+    	<%= v.text_field :value, :class => 'form-control' %>
+	</div>
+  <% end %>
+  <h4><%= link_to "remove", '#', class: "remove_fields" %></h4><br/></div>
